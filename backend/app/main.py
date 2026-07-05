@@ -12,8 +12,10 @@ app = FastAPI(title="Inventory/Shelf Object Counter API")
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "http://localhost:5173",   # local Vite dev server
-        # "https://your-frontend.vercel.app",
+    "http://localhost:5173",
+    "http://127.0.0.1:5173",
+    "https://your-vercel-url.vercel.app",
+]
     ],
     allow_methods=["*"],
     allow_headers=["*"],
