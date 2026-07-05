@@ -131,7 +131,7 @@ npm run dev
 Full walkthrough in [`DEPLOY.md`](DEPLOY.md) — Render for the backend,
 Vercel for the frontend, Supabase already hosted.
 
-- **Live app:** https://your-vercel-url.vercel.app
+- **Live app:** https://inventory-object-counter.vercel.app/
 - **API:** https://inventory-object-counter.onrender.com
 ## Future improvements
 
