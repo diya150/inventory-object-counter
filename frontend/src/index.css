@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #14181B;
+  --color-surface: #1B2126;
+  --color-raised: #222A30;
+  --color-paper: #F3EEDD;
+  --color-safety: #FFC53D;
+  --color-signal: #FF5A36;
+  --color-ink2: #EDEAE0;
+  --color-dim: #8B939A;
+  --color-line: #2E363C;
+
+  --font-display: "Archivo Black", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #14181B;
+  color: #EDEAE0;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Signature element: the shelf tag — a torn/perforated inventory label
+   used to display each detected object class and its count. */
+.shelf-tag {
+  position: relative;
+  background: #F3EEDD;
+  color: #14181B;
+  border-radius: 2px;
+  padding: 1.25rem 1.25rem 1rem;
+  overflow: hidden;
+}
+
+.shelf-tag::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background-image: radial-gradient(circle, #14181B 2.5px, transparent 2.6px);
+  background-size: 14px 14px;
+  background-position: 3px -4px;
+}
+
+.shelf-tag .barcode {
+  display: flex;
+  gap: 2px;
+  height: 22px;
+  align-items: flex-end;
+  opacity: 0.55;
+}
+
+.shelf-tag .barcode span {
+  display: block;
+  width: 2px;
+  background: #14181B;
+}
+
+/* focus visibility for accessibility */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid #FFC53D;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
